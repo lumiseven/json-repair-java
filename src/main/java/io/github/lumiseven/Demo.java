@@ -3,6 +3,10 @@ package io.github.lumiseven;
 import io.github.lumiseven.regular.JsonRepair;
 import io.github.lumiseven.exceptions.JsonRepairException;
 
+/**
+ * Demo class to showcase the JSON repair functionality.
+ * This class contains test cases that demonstrate various JSON repair capabilities.
+ */
 public class Demo {
     public static void main(String[] args) {
         System.out.println("JSON Repair Java Demo");

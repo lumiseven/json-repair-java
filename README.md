@@ -1,5 +1,8 @@
 # JSON Repair Java
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.lumiseven/json-repair-java.svg?style=flat-square)](https://search.maven.org/artifact/io.github.lumiseven/json-repair-java)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 Repair malformed JSON strings by fixing common issues like:
 
 - Single quotes instead of double quotes
@@ -9,6 +12,18 @@ Repair malformed JSON strings by fixing common issues like:
 - JavaScript-style comments
 - Unquoted strings
 - And many more JSON formatting issues
+
+## Installation
+
+To use JSON Repair Java in your project, add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.lumiseven</groupId>
+    <artifactId>json-repair-java</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
 
 ## Features
 
@@ -61,11 +76,9 @@ json-repair-java/
 │   │   └── StringUtils.java         # Utility functions
 │   ├── exceptions/
 │   │   └── JsonRepairException.java # Custom exception
-│   ├── App.java                     # Sample application
 │   └── Demo.java                    # Demonstration examples
 ├── src/test/java/io/github/lumiseven/
-│   ├── JsonRepairTest.java          # Unit tests
-│   └── AppTest.java                 # App tests
+│   └── JsonRepairTest.java          # Unit tests
 └── pom.xml                          # Maven configuration
 ```
 
@@ -104,19 +117,10 @@ mvn test
 
 - `JsonRepairException`: If the JSON cannot be repaired
 
-## Conversion Notes
+## Contributing
 
-This Java port maintains full compatibility with the original TypeScript implementation:
-
-- All parsing logic has been faithfully converted
-- Regular expressions and string manipulation functions work identically
-- Error handling preserves the same error messages and positions
-- Test cases verify identical behavior between TypeScript and Java versions
-
-## Original Library
-
-This is a Java version of [jsonrepair](https://github.com/josdejong/jsonrepair). The original TypeScript/JavaScript library is available on npm and GitHub.
+Contributions are welcome! If you find a bug or have a feature request, please open an issue. If you want to contribute code, please fork the repository and submit a pull request.
 
 ## License
 
-This project follows the same license as the original jsonrepair library.
+This project is licensed under the MIT License. See the [LICENSE](https://opensource.org/license/MIT) file for details.
