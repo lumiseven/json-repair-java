@@ -6,7 +6,8 @@
 
   <groupId>io.github.lumiseven</groupId>
   <artifactId>json-repair-java</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <description>json string fixes, especially for LLM scenarios</description>
+  <version>0.0.1</version>
 
   <name>json-repair-java</name>
   <url>https://github.com/lumiseven/json-repair-java</url>
@@ -22,27 +23,12 @@
     <developerConnection>scm:git:https://github.com/lumiseven/json-repair-java.git</developerConnection>
     <url>https://github.com/lumiseven/json-repair-java</url>
   </scm>
-
-<!-- <servers>
-
-    <server>
-      <id>ossrh</id>
-      <username>t4PK0u</username>
-      <password>20r9d2VutTVApSfv7RuAWqihIZ96a1b9u</password>
-    </server>
-</servers> -->
-
-<profiles>
-  
-    <profile>
-      <id>gpg</id>
-      <properties>
-        <gpg.executable>gpg</gpg.executable>
-        <gpg.passphrase>lumiseven7</gpg.passphrase>
-        <gpg.keyname>9F483DD85B9F6645</gpg.keyname>
-      </properties>
-    </profile>
-</profiles>
+  <developers>
+      <developer>
+          <name>lumiseven</name>
+          <email>lumiseven@yahoo.com</email>
+      </developer>
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,11 +47,11 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>ossrh</id>
+      <id>central</id>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>ossrh</id>
+      <id>central</id>
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
@@ -129,7 +115,7 @@
         <version>0.8.0</version>
         <extensions>true</extensions>
         <configuration>
-          <publishingServerId>ossrh</publishingServerId>
+          <publishingServerId>central</publishingServerId>
         </configuration>
       </plugin>
     </plugins>
