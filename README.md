@@ -21,7 +21,7 @@ To use JSON Repair Java in your project, add the following dependency to your `p
 <dependency>
     <groupId>io.github.lumiseven</groupId>
     <artifactId>json-repair-java</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 </dependency>
 ```
 
