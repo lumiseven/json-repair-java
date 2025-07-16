@@ -1,6 +1,6 @@
 # JSON Repair Java
 
-A Java port of the popular [jsonrepair](https://github.com/josdejong/jsonrepair) TypeScript/JavaScript library. This library can repair malformed JSON strings by fixing common issues like:
+Repair malformed JSON strings by fixing common issues like:
 
 - Single quotes instead of double quotes
 - Missing quotes around object keys
@@ -72,22 +72,20 @@ json-repair-java/
 ## Building and Testing
 
 ### Prerequisites
+
 - Java 8 or higher
 - Maven 3.6 or higher
 
 ### Build the project
+
 ```bash
 mvn compile
 ```
 
 ### Run tests
+
 ```bash
 mvn test
-```
-
-### Run the demo
-```bash
-mvn compile exec:java -Dexec.mainClass="io.github.lumiseven.Demo"
 ```
 
 ## API Reference
@@ -95,12 +93,15 @@ mvn compile exec:java -Dexec.mainClass="io.github.lumiseven.Demo"
 ### JsonRepair.jsonrepair(String text)
 
 **Parameters:**
+
 - `text` (String): The malformed JSON string to repair
 
 **Returns:**
+
 - String: The repaired JSON string
 
 **Throws:**
+
 - `JsonRepairException`: If the JSON cannot be repaired
 
 ## Conversion Notes
@@ -114,7 +115,7 @@ This Java port maintains full compatibility with the original TypeScript impleme
 
 ## Original Library
 
-This is a port of [jsonrepair](https://github.com/josdejong/jsonrepair) by Jos de Jong. The original TypeScript/JavaScript library is available on npm and GitHub.
+This is a Java version of [jsonrepair](https://github.com/josdejong/jsonrepair). The original TypeScript/JavaScript library is available on npm and GitHub.
 
 ## License
 

@@ -60,4 +60,29 @@ public class JsonRepairTest {
         String result = JsonRepair.jsonrepair(input);
         assertEquals(expected, result);
     }
+
+    @Test
+    public void testBlockComments() throws JsonRepairException {
+        String input = "/* comment */ { \"a\" : 1 }";
+        String expected = " { \"a\" : 1 }";
+        String result = JsonRepair.jsonrepair(input);
+        System.err.println("Result: " + result);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testMissingComma() throws JsonRepairException {
+        String input = "{\"a\":1 \"b\":2}";
+        String expected = "{\"a\":1, \"b\":2}";
+        String result = JsonRepair.jsonrepair(input);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testMissingValue() throws JsonRepairException {
+        String input = "{\"a\":}";
+        String expected = "{\"a\":null}";
+        String result = JsonRepair.jsonrepair(input);
+        assertEquals(expected, result);
+    }
 }

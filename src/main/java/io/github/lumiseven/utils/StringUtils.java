@@ -188,6 +188,29 @@ public class StringUtils {
         return text.substring(0, start) + text.substring(start + count);
     }
 
+    public static void insertBeforeLastWhitespace(StringBuilder sb, String textToInsert) {
+        int index = sb.length();
+
+        if (index == 0 || !isWhitespace(sb.charAt(index - 1))) {
+            // no trailing whitespaces
+            sb.append(textToInsert);
+            return;
+        }
+
+        while (index > 0 && isWhitespace(sb.charAt(index - 1))) {
+            index--;
+        }
+
+        sb.insert(index, textToInsert);
+    }
+
+    public static void stripLastOccurrence(StringBuilder sb, String textToStrip) {
+        int index = sb.lastIndexOf(textToStrip);
+        if (index != -1) {
+            sb.delete(index, index + textToStrip.length());
+        }
+    }
+
     /**
      * Test whether a string ends with a newline or comma character and optional whitespace
      */
